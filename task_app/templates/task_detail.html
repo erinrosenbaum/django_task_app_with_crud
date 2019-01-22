@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Task Detail{% endblock %}
+
+{% block content %}
+<h2>Name: {{ object.name }}</h2>
+<p>Created: {{ object.created }}</p>
+<p>Updated: {{ object.updated }}</p>
+<p><a href="{% url 'task_edit' task.pk %}">Edit</a></p>
+<p><a href="{% url 'task_delete' task.pk %}">Delete</a></p>
+<p><a href="{% url 'task_list' %}">List</a></p>
+{% endblock %}
